@@ -20,5 +20,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: 'OrmicoDbPatchManagerSqlServer.sln'
+    projects: 'OrmicoDbPatchManagerSqlServer/OrmicoDbPatchManagerSqlServer.sln'
     workingDirectory: 'OrmicoDbPatchManagerSqlServer'
