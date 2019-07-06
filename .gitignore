@@ -1,0 +1,4 @@
+*.user
+OrmicoDbPatchManagerSqlServer/.vs/*
+OrmicoDbPatchManagerSqlServer/Ormico.DbPatchManager.SqlServer/bin/*
+OrmicoDbPatchManagerSqlServer/Ormico.DbPatchManager.SqlServer/obj/*
