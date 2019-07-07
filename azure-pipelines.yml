@@ -16,6 +16,12 @@ steps:
     projects: 'OrmicoDbPatchManagerSqlServer/*.sln'
     workingDirectory: 'OrmicoDbPatchManagerSqlServer'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+- script: dotnet test src\Ormico.DbPatchManager.Logic.Tests/Ormico.DbPatchManager.Logic.Tests.csproj --logger trx --collect "Code coverage"
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'
