@@ -1,0 +1,23 @@
+trigger:
+- master
+pool:
+  vmImage: 'ubuntu-latest'
+variables:
+  buildConfiguration: 'Release'
+  Major: '2'
+  Minor: '0'
+  Patch: '0'
+#  Version: '$(Major).$(Minor).$(Patch).$(Build.BuildID)'
+  Version: '$(Major).$(Minor).$(Build.BuildID)'
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'OrmicoDbPatchManagerSqlServer/*.sln'
+    workingDirectory: 'OrmicoDbPatchManagerSqlServer'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+- script: dotnet build OrmicoDbPatchManagerSqlServer/*.sln
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: nuget-artifacts
