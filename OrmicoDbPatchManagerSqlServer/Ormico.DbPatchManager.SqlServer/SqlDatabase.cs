@@ -46,9 +46,9 @@ namespace Ormico.DbPatchManager.SqlServer
             foreach (string sql in enumerable)
             {
                 i++;
-                //set a timeout of 60 seconds * 15 minutes = 900 seconds
+                //set a timeout of 60 seconds * 60 minutes = 3600 seconds
                 //todo: make a global and/or patch specific setting in config
-                _con.Execute(sql, commandTimeout: 900);
+                _con.Execute(sql, commandTimeout: 3600);
             }
         }
 
