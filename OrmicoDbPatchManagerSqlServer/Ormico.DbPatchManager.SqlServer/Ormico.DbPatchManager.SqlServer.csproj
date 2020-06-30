@@ -13,7 +13,7 @@
     <Description>SQL Server plugin for Ormico DB Patch Manager. Provides interface for DB Patch Manager to perform change control on SQL Server.</Description>
     <PackageProjectUrl>https://dbpatch.dev/</PackageProjectUrl>
     <PackageIcon>dbpatch-manager-profile.png</PackageIcon>
-    <Version>1.0.0</Version>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,9 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.0.0" />
     <PackageReference Include="Ormico.DbPatchManager.Common" Version="1.0.0" />
-    <PackageReference Include="Ormico.SqlGoSplitter" Version="1.0.0" />
+    <PackageReference Include="Ormico.SqlGoSplitter" Version="1.0.0.79" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">
