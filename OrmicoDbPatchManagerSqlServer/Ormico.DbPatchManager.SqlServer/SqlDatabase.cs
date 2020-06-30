@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Ormico.DbPatchManager.Logic;
+using Ormico.DbPatchManager.Common;
 using Ormico.SqlGoSplitter;
 
 namespace Ormico.DbPatchManager.SqlServer
