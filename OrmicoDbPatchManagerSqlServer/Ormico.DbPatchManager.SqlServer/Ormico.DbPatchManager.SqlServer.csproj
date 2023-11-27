@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -34,9 +34,10 @@
     <EmbeddedResource Include="SqlScripts\temp.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.60.6" />
-    <PackageReference Include="Ormico.DbPatchManager.Common" Version="1.0.0" />
-    <PackageReference Include="Ormico.SqlGoSplitter" Version="1.0.0" />
+    <PackageReference Include="Dapper" Version="2.1.24" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Ormico.DbPatchManager.Common" Version="2.2.0" />
+    <PackageReference Include="Ormico.SqlGoSplitter" Version="1.0.0.79" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">
